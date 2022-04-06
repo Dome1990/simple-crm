@@ -11,8 +11,26 @@
     justify-content: center;
   }
   
-  .example-sidenav {
-    padding: 20px;
+  .sidenav {
+    width: 300px;
+  }
+
+  .logo-container{
+    padding: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    min-height: 56px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  mat-toolbar{
+    min-height: 56px;
+  }
+
+  mat-toolbar-row{
+    height: 56px;
   }
 
   .example-button-container {
@@ -20,4 +38,30 @@
     justify-content: center;
     width: 120px;
   }
-  
+
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+  li{
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+    &:focus{
+      outline: none;
+    }
+    mat-icon{
+      margin-right: 16px;
+    }
+  }
+
+  .router-container{
+    padding-left: 56px;
+    padding-top: 16px;
+  }
