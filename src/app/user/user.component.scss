@@ -1,5 +1,55 @@
-.add-button{
+.add-button {
     position: absolute;
     bottom: 24px;
     right: 56px;
+}
+
+mat-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    table {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        height: 48px;
+        cursor: pointer;
+        &:first-child{
+            cursor: unset;
+            &:hover{
+                background-color: unset;
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+        td {
+            &:first-child {
+                padding-left: 16px;
+            }
+        }
+
+        th {
+            text-align: start;
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+            font-weight: 500;
+            &:first-child {
+                padding-left: 16px;
+            }
+        }
+    }
+
+
 }
