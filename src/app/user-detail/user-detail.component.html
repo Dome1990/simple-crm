@@ -1,0 +1,39 @@
+<mat-card class="user-detail-header">
+    <button [matMenuTriggerFor]="menu_profile" class="more-header" mat-icon-button>
+        <mat-icon>more_vertical</mat-icon>
+    </button>
+    <mat-menu #menu_profile="matMenu">
+        <button mat-menu-item (click)="editProfile()">
+          <mat-icon>mode_edit</mat-icon>
+          <span>Edit</span>
+        </button>
+      </mat-menu>
+    <img src="../assets/img/blankProfilePic.png"
+        alt="Bild von Stephanie Edwards https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=973460">
+    <div class="header-text">
+        <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+        {{ user.eMail }}
+    </div>
+</mat-card>
+
+<mat-card class="user-detail-content mt-32">
+    <button [matMenuTriggerFor]="menu" class="more" mat-icon-button>
+        <mat-icon>more_vertical</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button (click)="editAddress()" mat-menu-item>
+          <mat-icon>mode_edit</mat-icon>
+          <span>Edit</span>
+        </button>
+      </mat-menu>
+
+    <mat-card-header>
+        <mat-card-title>
+            Address
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        {{ user.street }} <br>
+        {{ user.zipCode }} {{ user.city }}
+    </mat-card-content>
+</mat-card>

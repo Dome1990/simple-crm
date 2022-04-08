@@ -1,0 +1,43 @@
+.user-detail-header {
+    min-height: 250px;
+    display: flex;
+    align-items: flex-end;
+    background-color: #b91212;
+    padding: 16px;
+    box-sizing: border-box;
+
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .header-text {
+        height: 100px;
+        margin-left: 32px;
+        color: white;
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.more-header{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: white;
+}
+
+.user-detail-content {
+    position: relative;
+    mat-card-content {
+        margin: 0 16px;
+    }
+}
+.more{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
