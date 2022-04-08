@@ -11,6 +11,7 @@ export class DialogEditUserComponent implements OnInit {
 
   user!: User;
   loading = false;
+  birthDate!: Date;
 
   save(){
     
@@ -19,6 +20,7 @@ export class DialogEditUserComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.birthDate = new Date(this.user.birthDate);
   }
 
 }

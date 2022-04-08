@@ -1,30 +1,39 @@
 <div class="add-user-dialog">
-    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
-    <h1 mat-dialog-title>Edit user</h1>
-    <div mat-dialog-content>
-      <div>
-        <mat-form-field class="mr-16" appearance="outline">
-          <mat-label>First Name</mat-label>
-          <input [(ngModel)]="user.firstName" [disabled]="loading" matInput placeholder="First Name">
-        </mat-form-field>
-  
-        <mat-form-field appearance="outline">
-          <mat-label>Last Name</mat-label>
-          <input [(ngModel)]="user.lastName" [disabled]="loading" matInput placeholder="Last Name">
-        </mat-form-field>
-      </div>
-  
-      <div>
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>E-Mail</mat-label>
-          <input [(ngModel)]="user.eMail" [disabled]="loading" matInput placeholder="E-Mail">
-        </mat-form-field>
-      </div>
-  
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+  <h1 mat-dialog-title>Edit user</h1>
+  <div mat-dialog-content>
+    <div>
+      <mat-form-field class="mr-16" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input [(ngModel)]="user.firstName" [disabled]="loading" matInput placeholder="First Name">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input [(ngModel)]="user.lastName" [disabled]="loading" matInput placeholder="Last Name">
+      </mat-form-field>
     </div>
-    <div mat-dialog-actions>
-      <button mat-button mat-dialog-close>Cancel</button>
-      <button mat-button (click)="save()">Save</button>
+
+    <div>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>E-Mail</mat-label>
+        <input [(ngModel)]="user.eMail" [disabled]="loading" matInput placeholder="E-Mail">
+      </mat-form-field>
     </div>
-  
+
+    <div>
+      <mat-form-field appearance="outline"  class="full-width">
+        <mat-label>Birth Date</mat-label>
+        <input [(ngModel)]="birthDate" [disabled]="loading" matInput [matDatepicker]="picker" placeholder="Birth Date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
   </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button (click)="save()">Save</button>
+  </div>
+
+</div>
